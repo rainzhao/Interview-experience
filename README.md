@@ -20,8 +20,7 @@
         switch(type){
             case 'click':
             this.addEventListener('click',func)
-            //这里有个坑，为什么不用this.click事件而是用addEventListener,因为addEventListener可以多次绑定
-            
+            //这里有个坑，为什么不用this.click事件而是用addEventListener,因为addEventListener可以多次绑定     
         }
     }
 ```

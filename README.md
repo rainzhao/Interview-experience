@@ -12,7 +12,7 @@
 1. 根据你的笔试进行提问。
 
 ###3. Three part(复试)
-1. ** 简单介绍一下自己。**
+1. **简单介绍一下自己。**
 2. **jquery的`$('.test').on('click',function(){})`,自己实现一下on事件。我大概写了一个:**
 ```
     var jquery = function(){}

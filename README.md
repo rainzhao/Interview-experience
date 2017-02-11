@@ -39,7 +39,7 @@
 9. **如果不用任何框架包括jquery如何进行组件化的开发。**
     + 用prototype的原型链，抽象出公用的方法，如刚才的问题2。
 10. **angular和react的异同点。**
-11. JSON数组去重。
+11. **JSON数组去重。**
 ```
 //JOSN数组去重的算法 JS
     Array.prototype.unique1 = function () {

@@ -14,16 +14,18 @@
 ###3. Three part(复试)
 1. **简单介绍一下自己。**
 2. **jquery的`$('.test').on('click',function(){})`,自己实现一下on事件。我大概写了一个:**
-```
-    var jquery = function(){}
-    jquery.prototype.on = function (type,func) {
-        switch(type){
-            case 'click':
-            this.addEventListener('click',func)
-            //这里有个坑，为什么不用this.click事件而是用addEventListener,因为addEventListener可以多次绑定     
-        }
-    }
-```
+
+       
+        var jquery = function(){}
+        jquery.prototype.on = function (type,func) {
+            switch(type){
+                case 'click':
+                this.addEventListener('click',func)
+                //这里有个坑，为什么不用this.click事件而是用addEventListener,因为addEventListener可以多次绑定     
+            }
+        }
+        
+        
 3. **页面中有个表单，如何界面刷新的时候不会清空表单中的值。**
     + 我回答的是sessionStorage。感觉不是很好，但是面试官点了点头。。。
 4. **进行ajax请求的时候，如何判断你的请求和返回的结果进行匹配，有可能你请求了两次，但是第一次你的结果是错误的，第二次结果是对的，但是你拿到的是最近一次返回的，如果顺序颠倒了，怎么进行避免。**
@@ -40,25 +42,25 @@
     + 用prototype的原型链，抽象出公用的方法，如刚才的问题2。
 10. **angular和react的异同点。**
 11. **JSON数组去重。**
-```
-//JOSN数组去重的算法 JS
-    Array.prototype.unique1 = function () {
-        var res = [this[0]];
-        for (var i = 1; i < this.length; i++) {
-            var repeat = false;
-            for (var j = 0; j < res.length; j++) {
-                if (this[i].name== res[j].name) {
-                    repeat = true;
-                    break;
+
+        //JOSN数组去重的算法 JS
+        Array.prototype.unique1 = function () {
+            var res = [this[0]];
+            for (var i = 1; i < this.length; i++) {
+                var repeat = false;
+                for (var j = 0; j < res.length; j++) {
+                    if (this[i].name== res[j].name) {
+                        repeat = true;
+                        break;
+                    }
+                }
+                if (!repeat) {
+                    res.push(this[i]);
                 }
             }
-            if (!repeat) {
-                res.push(this[i]);
-            }
+            return res;
         }
-        return res;
-    }
-```
+
 12. **如何监控js报错**
     + onerror事件
     
